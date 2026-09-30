@@ -1,0 +1,19 @@
+[project]
+name = "a-ponte"
+version = "1.0.0"
+description = "Servidor MCP de salas e agente A2A que o consome (desafio A Ponte)"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp==2.2.0",
+    "pydantic==2.13.5",
+    "starlette==1.7.0",
+    "uvicorn==0.54.0",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+# Os dois processos rodam como scripts (servidor-mcp/ e agente/); o pacote so carrega as dependencias.
+packages = []
